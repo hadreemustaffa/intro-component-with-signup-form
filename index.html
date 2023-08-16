@@ -22,25 +22,19 @@
 
     <main>
       <div class="trial-description">
-        <p>Try it free 7 days then $20/mo. thereafter</p>
+        <p><span>Try it free 7 days</span> then $20/mo. thereafter</p>
       </div>
 
       <form name="signup-form" action="#">
-        <input type="text" name="firstname" id="firstname" placeholder="First Name">
-        <input type="text" name="lastname" id="lastname" placeholder="Last Name">
-        <input type="email" name="email" id="email" placeholder="Email Address">
-        <input type="password" name="password" id="password" placeholder="Password">
-        <input type="button" value="claim your free trial">
+        <input type="text" name="firstname" id="firstname" placeholder="First Name" autocomplete="off" required>
+        <input type="text" name="lastname" id="lastname" placeholder="Last Name" autocomplete="off" required>
+        <input type="email" name="email" id="email" placeholder="Email Address" autocomplete="off" required>
+        <input type="password" name="password" id="password" placeholder="Password" autocomplete="off" required>
+        <input type="button" value="CLAIM YOUR FREE TRIAL">
+        <p class="consent">By clicking the button, you are agreeing to our <span>Terms and Services</span></p>
       </form>
-      <p class="consent">By clicking the button, you are agreeing to our Terms and Services</p>
-    </main>
 
-    <footer>
-      <p class="attribution">
-        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
-        Coded by <a href="#">Your Name Here</a>.
-      </p>
-    </footer>
+    </main>
   </div>
 </body>
 
