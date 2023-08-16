@@ -166,22 +166,22 @@ input[type='button'] {
 	outline: none;
 }
 
-input:focus:not(:last-of-type) {
-	border: 1px solid var(--clr-neutral-dark-blue);
-	color: var(--clr-neutral-dark-blue);
-}
-
 input[type='text'],
 input[type='password'],
 input[type='email'],
-input[type='button'] {
+button {
 	padding: 1rem 2rem;
 	font-weight: var(--fw-semibold);
 	border: 1px solid var(--clr-neutral-grayish-blue);
 	border-radius: 10px;
 }
 
-input[type='button'] {
+input:focus {
+	border: 1px solid var(--clr-neutral-dark-blue);
+	color: var(--clr-neutral-dark-blue);
+}
+
+button {
 	color: white;
 	font-weight: var(--fw-regular);
 	letter-spacing: 1.5px;
@@ -190,12 +190,12 @@ input[type='button'] {
 	border: none;
 	box-shadow: 0 4px hsl(154, 59%, 41%);
 }
-input[type='button']:hover,
-input[type='button']:focus {
+button:hover,
+button:focus {
 	background-color: hsla(154, 59%, 51%, 0.75);
 	cursor: pointer;
 }
-input[type='button']:active {
+button:active {
 	transform: translateY(5px);
 	box-shadow: none;
 }
