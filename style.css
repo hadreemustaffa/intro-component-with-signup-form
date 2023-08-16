@@ -209,3 +209,52 @@ button:active {
 	font-weight: var(--fw-bold);
 	color: var(--clr-primary-red);
 }
+
+@media screen and (min-width: 900px) and (max-width: 1200px) {
+	:root {
+		--fs-lg: 2.7rem;
+		--fs-md: 0.9rem;
+		--fs-sm: 0.5rem;
+	}
+
+	.main-container {
+		max-width: 806px;
+	}
+}
+
+@media screen and (min-width: 600px) and (max-width: 899px) {
+	:root {
+		--fs-lg: 2.7rem;
+		--fs-md: 0.9rem;
+		--fs-sm: 0.5rem;
+	}
+	.main-container {
+		max-width: 700px;
+		text-align: center;
+		display: flex;
+		flex-direction: column;
+	}
+}
+
+@media screen and (max-width: 599px) {
+	:root {
+		--fs-lg: 2rem;
+		--fs-md: 0.9rem;
+		--fs-sm: 0.45rem;
+	}
+
+	.main-container {
+		text-align: center;
+		display: flex;
+		flex-direction: column;
+		margin: 2rem auto;
+	}
+
+	.trial-description {
+		padding: 1rem 3rem;
+	}
+
+	form {
+		padding: 1.5rem;
+	}
+}
