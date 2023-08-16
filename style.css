@@ -4,9 +4,9 @@
 	/* font variables */
 	--ff-primary: 'Poppins', sans-serif;
 
-	--fs-lg: 2.5rem;
+	--fs-lg: 3rem;
 	--fs-md: 1rem;
-	--fs-sm: 0.5rem;
+	--fs-sm: 0.75rem;
 
 	--fw-bold: 700;
 	--fw-semibold: 600;
@@ -27,7 +27,6 @@
 }
 
 /* reset start */
-
 /*
   1. Use a more-intuitive box-sizing model.
 */
@@ -49,6 +48,7 @@
   4. Improve text rendering
 */
 body {
+	height: 100%;
 	line-height: 1.5;
 	-webkit-font-smoothing: antialiased;
 }
@@ -85,5 +85,118 @@ h6 {
 	overflow-wrap: break-word;
 }
 /*
+/* Reset end */
 
-/* reset end */
+/* General styling */
+h1 {
+	font-family: var(--ff-heading);
+	font-size: var(--fs-lg);
+	font-weight: var(--fw-bold);
+}
+
+body {
+	min-height: 100vh;
+	display: grid;
+	place-content: center;
+	font-family: var(--ff-body);
+	font-size: var(--fs-md);
+	font-weight: var(--fw-regular);
+	color: white;
+	background-color: var(--clr-primary-red);
+}
+
+.bg-img {
+	width: 100vw;
+	height: 100vh;
+	position: absolute;
+	z-index: -1;
+}
+
+.main-container {
+	width: 77.2%;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: auto;
+	margin: auto;
+	gap: 2rem;
+}
+
+header {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	gap: 1rem;
+	grid-area: 1 / 1 / 2 / 2;
+}
+
+main {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+}
+
+.trial-description {
+	width: 100%;
+	background-color: var(--clr-accent-blue);
+	color: var(--clr-neutral-grayish-blue);
+	text-align: center;
+	padding: 1em;
+	border-radius: 10px;
+	box-shadow: 0 10px 0.5px 0 hsla(249, 10%, 26%, 0.25);
+}
+.trial-description > p > span {
+	color: white;
+	font-weight: var(--fw-bold);
+}
+
+form {
+	display: flex;
+	flex-direction: column;
+	padding: 2.5rem;
+	background-color: white;
+	border-radius: 10px;
+	gap: 1.5rem;
+	box-shadow: 0 10px 0.5px 0 hsla(249, 10%, 26%, 0.25);
+}
+
+input[type='text'],
+input[type='password'],
+input[type='email'],
+input[type='button'] {
+	outline: none;
+}
+
+input[type='text'],
+input[type='password'],
+input[type='email'],
+input[type='button'] {
+	padding: 1rem 2rem;
+	font-weight: var(--fw-semibold);
+	border: 1px solid var(--clr-neutral-grayish-blue);
+	border-radius: 10px;
+}
+
+input:focus:not(:last-of-type) {
+	border: 1px solid var(--clr-neutral-dark-blue);
+	color: var(--clr-neutral-dark-blue);
+}
+
+input[type='button'] {
+	color: white;
+	font-weight: var(--fw-regular);
+	letter-spacing: 1.5px;
+	background-color: var(--clr-primary-green);
+	padding: 1rem;
+	border: none;
+	box-shadow: 0 4px hsl(154, 59%, 41%);
+}
+
+.consent {
+	text-align: center;
+	font-size: var(--fs-sm);
+	color: var(--clr-neutral-grayish-blue);
+}
+.consent > span {
+	font-weight: var(--fw-bold);
+	color: var(--clr-primary-red);
+}
