@@ -11,6 +11,7 @@ This is a solution to the [Intro component with sign up form challenge on Fronte
   - [Built with](#built-with)
   - [Useful resources](#useful-resources)
 - [Author](#author)
+- [Acknowledgements](#acknowledgments)
 
 ## Overview
 
@@ -38,12 +39,9 @@ Users should be able to:
 - Flexbox
 - CSS Grid
 
-### What I learned
-
 ### Useful resources
 
 - [Medium](https://uxplanet.org/10-best-practices-for-creating-sign-up-forms-48470ce94b16) - Article on sign-up forms best practices.
-- [LinkedIn](https://www.linkedin.com/pulse/create-strong-password-validation-regex-javascript-mitanshu-kumar/) - Article on regex(regular expressions) for strong password validation.
 - [MDN](https://developer.mozilla.org/en-US/docs/Learn/Forms/How_to_build_custom_form_controls) - In-depth tutorial on how to build custom form controls.
 - [freeCodeCamp](https://www.freecodecamp.org/news/form-validation-with-html5-and-javascript/) - Article on form validation
 - [HTML.form.guide](https://html.form.guide/best-practices/form-validations-definitive-guide/) - Article on form validation best practices
@@ -54,6 +52,6 @@ Users should be able to:
 
 ## Acknowledgments
 
-- Youtube - [@cobebubb](https://www.youtube.com/watch?v=iyngFd6f8ko)
+- Youtube - [@codebubb](https://www.youtube.com/watch?v=iyngFd6f8ko)
 
-This video explains everything I read from articles and tutorial above. I know absolutely nothing about validations prior to this challenge. This helps me understand it well.
+This video explains everything I read from articles and tutorial above. I know absolutely nothing about validations prior to this challenge. This video helped me understand it well.
