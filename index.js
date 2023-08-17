@@ -79,9 +79,19 @@ const validateForm = (formSelector) => {
 	// disable default HTML validation
 	formElement.setAttribute('novalidate', '');
 
+	// creates an array from all form inputs
+	Array.from(formElement.elements).forEach((element) => {
+		// listens if a focused element is out of focus
+		element.addEventListener('blur', (e) => {
+			// once the element is out of focus, validate it
+			validateSingleFormGroup(e.srcElement.closest('.form-group'));
+		});
+	});
+
 	// listens if user has submitted or not
 	formElement.addEventListener('submit', (e) => {
 		e.preventDefault();
+
 		validateAllFormGroups(formElement);
 	});
 
