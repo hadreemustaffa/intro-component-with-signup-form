@@ -27,8 +27,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [Frontend Mentor](https://www.frontendmentor.io/solutions/intro-component-with-signup-form-using-flexbox-grid-and-javascript-YvUmqqba5f)
+- Live Site URL: [Github Pages](https://hadreemustaffa.github.io/intro-component-with-signup-form/)
 
 ## My process
 
