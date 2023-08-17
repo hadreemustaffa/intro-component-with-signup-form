@@ -3,12 +3,39 @@ const validateForm = (formSelector) => {
 
 	const validationOptions = [
 		{
+			attribute: 'minlength',
+			isValid: (input) =>
+				input.value && input.value.length >= parseInt(input.minLength, 10),
+			errorMessage: (input, label) =>
+				`${label.textContent} must be more than ${input.minLength} characters`,
+		},
+		{
+			attribute: 'custommaxlength',
+			isValid: (input) =>
+				input.value &&
+				input.value.length <=
+					parseInt(input.getAttribute('custommaxLength'), 10),
+			errorMessage: (input, label) =>
+				`${label.textContent} must be less than ${input.getAttribute(
+					'custommaxlength'
+				)} characters`,
+		},
+		{
+			attribute: 'pattern',
+			isValid: (input) => {
+				const emailPattern = new RegExp(input.pattern);
+				return emailPattern.test(input.value);
+			},
+			errorMessage: () => `Looks like this is not an email`,
+		},
+		{
 			attribute: 'required',
 			isValid: (input) => input.value.trim() !== '',
 			errorMessage: (input, label) => `${label.textContent} cannot be empty`,
 		},
 	];
 
+	// select per form group
 	const validateSingleFormGroup = (formGroup) => {
 		const label = formGroup.querySelector('label');
 		const input = formGroup.querySelector('input');
@@ -18,7 +45,7 @@ const validateForm = (formSelector) => {
 
 		// on default, set error state to 'false'
 		let formGroupError = false;
-		// create variable Option from list of available key in the array validationOptions
+		// create variable 'Option' from list of available keys in the array validationOptions
 		for (const option of validationOptions) {
 			// check whether the input has attribute
 			if (input.hasAttribute(option.attribute) && !option.isValid(input)) {
@@ -49,19 +76,22 @@ const validateForm = (formSelector) => {
 		}
 	};
 
+	// disable default HTML validation
 	formElement.setAttribute('novalidate', '');
 
+	// listens if user has submitted or not
 	formElement.addEventListener('submit', (e) => {
 		e.preventDefault();
-
 		validateAllFormGroups(formElement);
 	});
 
+	// check for all inputs available with the class '.form-group'
 	const validateAllFormGroups = (formToValidate) => {
 		const formGroups = Array.from(
 			formToValidate.querySelectorAll('.form-group')
 		);
 
+		// validate each one with that class
 		formGroups.forEach((formGroup) => {
 			validateSingleFormGroup(formGroup);
 		});
@@ -69,19 +99,3 @@ const validateForm = (formSelector) => {
 };
 
 validateForm('#form');
-
-// let passwordRegex =
-// 	/^(?!.*\s)(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9])(?=.*[~`!@#$%^&*()--+={}\[\]|\\:;"'<>,.?/_₹]).{12,16}$/;
-
-// function isValidEmail() {}
-
-// function isValidPassword() {}
-
-/*
-1. check if password have any whitespace
-2. check if there is at least one(1) uppercase letter
-3. check if there is at least one(1) lowercase letter
-4. check if there is at least one(1) digit
-5. check if there is at least one(1) special symbol
-6. check if password is at least 12 characters long
-*/
