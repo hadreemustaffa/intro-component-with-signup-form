@@ -7,6 +7,7 @@
   <meta name="description" content="Intro Component with Signup Form Solution for Frontendmentor.io">
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="stylesheet" href="style.css">
+  <script defer src="index.js"></script>
   <title>Frontend Mentor | Intro component with sign up form</title>
 </head>
 
@@ -25,17 +26,42 @@
         <p><span>Try it free 7 days</span> then $20/mo. thereafter</p>
       </div>
 
-      <form name="signup-form" action="#">
-        <input type="text" name="firstname" id="firstname" placeholder="First Name" autocomplete="off" required>
-        <input type="text" name="lastname" id="lastname" placeholder="Last Name" autocomplete="off" required>
-        <input type="email" name="email" id="email" placeholder="Email Address" autocomplete="off" required>
-        <input type="password" name="password" id="password" placeholder="Password" autocomplete="off" required>
-        <button type="button" onclick="">CLAIM YOUR FREE TRIAL</button>
+      <form name="signup-form" id="form" action="#">
+        <div class="form-group">
+          <input type="text" name="firstname" id="firstname" placeholder="First Name" autocomplete="off" autofocus>
+          <span class="error-icon hidden">
+            <img src="images/icon-error.svg" alt="">
+          </span>
+        </div>
+
+        <div class="form-group">
+          <input type="text" name="lastname" id="lastname" placeholder="Last Name" autocomplete="off">
+          <span class="error-icon hidden">
+            <img src="images/icon-error.svg" alt="">
+          </span>
+        </div>
+
+        <div class="form-group">
+          <input type="text" name="email" id="email" placeholder="Email Address" autocomplete="off">
+          <span class="error-icon hidden">
+            <img src="images/icon-error.svg" alt="">
+          </span>
+        </div>
+
+        <div class="form-group">
+          <input type="password" name="password" id="password" placeholder="Password" autocomplete="off">
+          <span class="error-icon hidden">
+            <img src="images/icon-error.svg" alt="">
+          </span>
+        </div>
+        <button type="submit" onclick="formValidation(document.signup-form)" id="submit-btn">CLAIM YOUR FREE
+          TRIAL</button>
         <p class="consent">By clicking the button, you are agreeing to our <span>Terms and Services</span></p>
       </form>
 
     </main>
   </div>
+
 </body>
 
 </html>
