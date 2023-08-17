@@ -120,7 +120,7 @@ body {
 	grid-template-columns: 1fr 1fr;
 	grid-template-rows: auto;
 	margin: auto;
-	gap: 2.5rem;
+	gap: 4rem;
 }
 
 header {
@@ -171,6 +171,7 @@ form {
 	width: 100%;
 	border: none;
 	outline: none;
+	letter-spacing: 1px;
 }
 
 .input-container {
@@ -296,6 +297,10 @@ button:active {
 }
 
 @media screen and (min-width: 1600px) {
+	:root {
+		--fs-sm: 0.688rem;
+	}
+
 	.main-container {
 		width: 100%;
 		max-width: 1250px;
