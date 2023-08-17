@@ -30,35 +30,38 @@
         <div class="form-group">
           <div class="input-container">
             <label for="firstname" hidden>First Name</label>
-            <input type="text" name="firstname" id="first-name" placeholder="First Name" autocomplete="off" autofocus
+            <input type="text" name="firstname" id="first-name" placeholder="First Name" autocomplete="off"
+              minlength="2" custommaxlength="10" autofocus required>
+            <img src="images/icon-error.svg" alt="" class="error-icon hidden">
+          </div>
+          <div class="error-message"></div>
+        </div>
+
+        <div class="form-group">
+          <div class="input-container">
+            <label for="lastname" hidden>Last Name</label>
+            <input type="text" name="lastname" id="last-name" placeholder="Last Name" autocomplete="off" minlength="2"
+              custommaxlength="10" required>
+            <img src="images/icon-error.svg" alt="" class="error-icon hidden">
+          </div>
+          <div class="error-message"></div>
+        </div>
+
+        <div class="form-group">
+          <div class="input-container">
+            <label for="email" hidden>Email</label>
+            <input type="text" name="email" id="email" placeholder="Email Address" autocomplete="off"
+              pattern="^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$" required>
+            <img src="images/icon-error.svg" alt="" class="error-icon hidden">
+          </div>
+          <div class="error-message"></div>
+        </div>
+
+        <div class="form-group">
+          <div class="input-container">
+            <label for="password" hidden>Password</label>
+            <input type="password" name="password" id="password" placeholder="Password" autocomplete="off" minlength="8"
               required>
-            <img src="images/icon-error.svg" alt="" class="error-icon hidden">
-          </div>
-          <div class="error-message"></div>
-        </div>
-
-        <div class="form-group">
-          <div class="input-container">
-            <label for="firstname" hidden>Last Name</label>
-            <input type="text" name="lastname" id="last-name" placeholder="Last Name" autocomplete="off" required>
-            <img src="images/icon-error.svg" alt="" class="error-icon hidden">
-          </div>
-          <div class="error-message"></div>
-        </div>
-
-        <div class="form-group">
-          <div class="input-container">
-            <label for="firstname" hidden>Email</label>
-            <input type="text" name="email" id="email" placeholder="Email Address" autocomplete="off" required>
-            <img src="images/icon-error.svg" alt="" class="error-icon hidden">
-          </div>
-          <div class="error-message"></div>
-        </div>
-
-        <div class="form-group">
-          <div class="input-container">
-            <label for="firstname" hidden>Password</label>
-            <input type="password" name="password" id="password" placeholder="Password" autocomplete="off" required>
             <img src="images/icon-error.svg" alt="" class="error-icon hidden">
           </div>
           <div class="error-message"></div>
