@@ -10,14 +10,14 @@ const validateForm = (formSelector) => {
 				`${label.textContent} must be more than ${input.minLength} characters`,
 		},
 		{
-			attribute: 'custommaxlength',
+			attribute: 'data-maxlength',
 			isValid: (input) =>
 				input.value &&
 				input.value.length <=
-					parseInt(input.getAttribute('custommaxLength'), 10),
+					parseInt(input.getAttribute('data-maxLength'), 10),
 			errorMessage: (input, label) =>
 				`${label.textContent} must be less than ${input.getAttribute(
-					'custommaxlength'
+					'data-maxlength'
 				)} characters`,
 		},
 		{
