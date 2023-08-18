@@ -12,9 +12,9 @@
 </head>
 
 <body>
-  <img class="bg-img" src="images/bg-intro-desktop.png" alt="">
 
   <div class="main-container">
+    <img class="bg-img" src="images/bg-intro-desktop.png" alt="">
     <header>
       <h1>Learn to code by watching others</h1>
       <p>See how experienced developers solve problems in real-time. Watching scripted tutorials is great,
@@ -30,9 +30,9 @@
         <!-- First Name -->
         <div class="form-group">
           <div class="input-container">
-            <label for="firstname" hidden>First Name</label>
+            <label for="first-name" hidden>First Name</label>
             <input type="text" name="firstname" id="first-name" placeholder="First Name" autocomplete="off"
-              minlength="2" custommaxlength="10" autofocus required>
+              minlength="2" data-maxlength="10" autofocus required>
             <img src="images/icon-error.svg" alt="" class="error-icon hidden">
           </div>
           <div class="error-message"></div>
@@ -41,9 +41,9 @@
         <!-- Last Name -->
         <div class="form-group">
           <div class="input-container">
-            <label for="lastname" hidden>Last Name</label>
+            <label for="last-name" hidden>Last Name</label>
             <input type="text" name="lastname" id="last-name" placeholder="Last Name" autocomplete="off" minlength="2"
-              custommaxlength="10" required>
+              data-maxlength="10" required>
             <img src="images/icon-error.svg" alt="" class="error-icon hidden">
           </div>
           <div class="error-message"></div>
