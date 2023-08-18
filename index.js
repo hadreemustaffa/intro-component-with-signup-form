@@ -3,15 +3,19 @@ const validateForm = (formSelector) => {
 
 	const validationOptions = [
 		{
+			// minimum characters for first and last name
 			attribute: 'minlength',
 			isValid: (input) =>
+				// check user's input against minLength attribute of the input
 				input.value && input.value.length >= parseInt(input.minLength, 10),
 			errorMessage: (input, label) =>
 				`${label.textContent} must be more than ${input.minLength} characters`,
 		},
 		{
+			// maximum characters for first and last name
 			attribute: 'data-maxlength',
 			isValid: (input) =>
+				// check user's input against maxLength attribute of the input
 				input.value &&
 				input.value.length <=
 					parseInt(input.getAttribute('data-maxLength'), 10),
@@ -30,6 +34,7 @@ const validateForm = (formSelector) => {
 		},
 		{
 			attribute: 'required',
+			// check user's input and remove white spaces
 			isValid: (input) => input.value.trim() !== '',
 			errorMessage: (input, label) => `${label.textContent} cannot be empty`,
 		},
